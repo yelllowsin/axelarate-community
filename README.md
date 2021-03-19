@@ -13,6 +13,14 @@ Axelar Network is a work in progress. At no point in time should you transfer an
 - Axelar faucet: http://faucet.testnet.axelar.network/
 - Latest docker images: https://hub.docker.com/repository/docker/axelarnet/axelar-core, 
   https://hub.docker.com/repository/docker/axelarnet/tofnd 
+  
+## Useful commands
+Axelar node runs in two containers. You can stop/remove all your containers using: 
+```
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+```
+
 
 ## What you need
 - Bitcoin testnet faucet to send some test BTC: https://testnet-faucet.mempool.co/
