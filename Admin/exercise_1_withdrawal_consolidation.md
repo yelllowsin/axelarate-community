@@ -5,14 +5,14 @@ While doing exercise 1, testnet users will submit withdrawals on Ethereum back t
 1. Trigger signing of all pending transfers to Bitcoin. Note that you need to include a small Bitcoin fee (not the amount that was transferred) in this transaction (0.0001btc seems enouugh in most cases. See the testnet for the latest fees included in Bitcoin blocks).
 
   ```
-  axelard tx bitcoin sign-pending-transfers {tx fee} --from validator -b block -y
+  axelard tx bitcoin sign-pending-transfers {tx fee} --from validator -b block -y --gas="auto" --gas-adjustment=1.15
   -> wait for sign protocol to complete (~10 Axelar blocks)
   ```
 
  e.g.,
 
   ```
-  axelard tx bitcoin sign-pending-transfers 0.0001btc --from validator -b block -y
+  axelard tx bitcoin sign-pending-transfers 0.0001btc --from validator -b block -y --gas="auto" --gas-adjustment=1.15
   ```
   If everything succedeed, go to Step 5. 
 
